@@ -157,10 +157,35 @@ export const themeSettings =(mode) =>{
                     default: "#fcfcfc",
                 },
 
-            }
-            )
+            }),
         },
-        typgraphy
+        typography:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 12,
+        h1:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 40,
+        },
+        h2:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 32,
+        },
+        h3:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 24,
+        },
+        h4:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 20,
+        },
+        h5:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 16,
+        },
+        h6:{
+            fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
+            fontSize: 14,
+        }
     }
 }
 

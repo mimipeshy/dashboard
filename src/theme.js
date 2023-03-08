@@ -209,5 +209,6 @@ export const UseMode=() =>{
         }),
         []
     );
-    
+    const theme = useMemo(()=>createTheme(themeSettings(mode)),[mode]);
+    return [theme, colorMode]; 
 }

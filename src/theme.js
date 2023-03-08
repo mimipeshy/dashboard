@@ -199,7 +199,7 @@ export const  ColorModeContext = createContext({
     }
 });
 
-export const UseMode=() =>{
+export const useMode=() =>{
     const [mode, setMode] = useState["dark"];
     const colorMode =useMemo(
         () =>({

@@ -185,9 +185,29 @@ export const themeSettings =(mode) =>{
         h6:{
             fontFamiy: ["Source Sans Pro", "sans-serif"].join(","),
             fontSize: 14,
-        }
+        },
+    },
+};
+};
+
+//create react context for clor mode
+
+export const  ColorModeContext = createContext({
+    //provide the toggle button in the whole dashboard
+    toggleColorMode:()=>{
+
     }
+});
+
+export const UseMode=() =>{
+    const [mode, setMode] = useState["dark"];
+    const colorMode =useMemo(
+        () =>({
+            toggleColorMode: () =>
+            setMode((prev) => (prev === "light" ? "dark" : "light")),
+
+        }),
+        []
+    );
+    
 }
-
-
-

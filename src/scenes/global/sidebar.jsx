@@ -115,7 +115,7 @@ const Sidebar = () => {
               </Box>
             </Box>
           )}
-
+            {/* MENU ITEMS */}
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Dashboard"

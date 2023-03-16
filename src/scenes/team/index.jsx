@@ -68,9 +68,11 @@ const Team = () => {
       },
     ];
     return (
-        <Box>
+        <Box m="20px">
             <Header title="TEAM" subtitle="Managing team members" />
-            <Box>
+            <Box 
+            m="40px 0 0 0"
+            height="75vh">
                 <DataGrid
                     rows={mockDataTeam}
                     columns={columns}

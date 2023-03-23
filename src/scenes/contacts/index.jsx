@@ -5,7 +5,7 @@ import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
-const Team = () => {
+const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
@@ -50,22 +50,9 @@ const Team = () => {
       flex: 1,
     },
   ];
-    return (
-          <Box m="20px">
-            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-            {access === "manager" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
-            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {access}
-            </Typography>
-          </Box>
-        );
-      },
-    },
-  ];
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Managing team members" />
+      <Header title="CONTACTS" subtitle="List of contacts" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -95,12 +82,13 @@ const Team = () => {
           },
         }}>
         <DataGrid
-          rows={mockDataTeam}
+          rows={mockDataContacts}
           columns={columns}
+          components={{Toolbar:GridToolbar}}
         />
       </Box>
     </Box>
   )
 }
 
-export default Team;
+export default Contacts;

@@ -11,10 +11,10 @@ const Team = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const columns = [
-        { field: "id", headername: "ID" },
+        { field: "id", headerName: "ID" },
         {
             field: "name",
-            headername: "Name",
+            headerName: "Name",
             flex: 1,
             cellClassName: "name-column--cell"
         },

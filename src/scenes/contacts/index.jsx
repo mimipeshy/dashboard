@@ -9,13 +9,13 @@ const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headername: "ID", flex: 0.5 },
+    { field: "id", headerName: "ID", flex: 0.5 },
     { field: "registrarId", headerName: "Registrar ID" },
     {
       field: "name",
-      headername: "Name",
+      headerName: "Name",
       flex: 1,
-      cellClassName: "name-column--cell"
+      cellClassName: "name-column--cell",
     },
     {
       field: "age",
@@ -45,14 +45,18 @@ const Contacts = () => {
       flex: 1,
     },
     {
-      field: "zipcode",
+      field: "zipCode",
       headerName: "Zip Code",
       flex: 1,
     },
   ];
+
   return (
     <Box m="20px">
-      <Header title="CONTACTS" subtitle="List of contacts" />
+      <Header
+        title="CONTACTS"
+        subtitle="List of Contacts for Future Reference"
+      />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -80,15 +84,20 @@ const Contacts = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.greenAccent[200]} !important`,
           },
-        }}>
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.grey[100]} !important`,
+          },
+        }}
+      >
         <DataGrid
           rows={mockDataContacts}
           columns={columns}
-          components={{Toolbar:GridToolbar}}
+          components={{ Toolbar: GridToolbar }}
         />
       </Box>
     </Box>
-  )
-}
+  );
+};
+
 
 export default Contacts;
